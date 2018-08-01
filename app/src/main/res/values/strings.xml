@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Error messages-->
+    <string name="detail_error_message">Data not available</string>
+
+    <!-- Detail Activity-->
+    <string name="app_name">MovieApp</string>
+    <string name="action_reset">Reset</string>
+
+    <string name="title">Title:</string>
+    <string name="title_tv">title_tv</string>
+
+    <string name="id">Movie Id:</string>
+    <string name="id_tv">id_tv</string>
+
+    <string name="vote_count">Vote:</string>
+    <string name="vote_count_tv">vote_count_tv</string>
+
+    <string name="popularity">Popularity:</string>
+    <string name="popularity_tv">popularity_tv</string>
+
+    <string name="original_language">Original Language:</string>
+    <string name="original_language_tv">movie_name_tv</string>
+
+    <string name="original_title">Original Title:</string>
+    <string name="original_title_tv">original_title_tv</string>
+
+    <string name="overview">Overview:</string>
+    <string name="overview_tv">overview_tv</string>
+
+    <string name="release_date">Release Date:</string>
+    <string name="release_date_tv">release_date</string>
+
+    <string name="adult">Adult :</string>
+    <string name="adult_tv">adult_tv</string>
+
+    <string name="video">Video:</string>
+    <string name="video_tv">video_tv</string>
+
+    <string name="genre_ids">Genres:</string>
+    <string name="genre_ids_tv">genre_ids_tv</string>
+
+    <string name="backdrop_path">backdrop_path</string>
+    <string name="backdrop_path_img">backdrop_path_img</string>
+
+    <string name="poster_path">poster_path</string>
+    <string name="poster_path_img">poster_path_img</string>
+
+    <string name="poster_path_main_img">poster_path_main_img</string>
+    <string name="poster_main_path">poster_main_path</string>
+
+
+</resources>

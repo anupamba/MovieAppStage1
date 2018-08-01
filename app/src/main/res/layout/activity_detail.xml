@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorAccent  ">
+
+    <!-- image_iv -->
+    <ImageView
+        android:id="@+id/poster_path_img"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/poster_path"
+        android:scaleType="centerCrop" />
+
+    <!-- title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- original_title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/original_title"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/original_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- vote_count -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vote_count"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/vote_count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- popularity -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/popularity"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/popularity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- original_language -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/original_language"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/original_language_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <!-- overview -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/overview"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/overview_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <!-- release_date -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/release_date"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/release_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- geners -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/genre_ids"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/genre_ids_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <!-- adult -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adult"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/adult_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- video -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/video"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/video_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
+</ScrollView>
