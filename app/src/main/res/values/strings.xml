@@ -49,5 +49,7 @@
     <string name="poster_path_main_img">poster_path_main_img</string>
     <string name="poster_main_path">poster_main_path</string>
 
+    <string name="action_popular">Popular Movies</string>
+    <string name="action_topRated">Top Movies</string>
 
 </resources>

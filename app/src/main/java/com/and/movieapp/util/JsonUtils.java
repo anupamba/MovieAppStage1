@@ -1,7 +1,5 @@
 package com.and.movieapp.util;
 
-import android.provider.Settings;
-
 import com.and.movieapp.model.MovieDto;
 import org.json.JSONArray;
 import org.json.JSONException;

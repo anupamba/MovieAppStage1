@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity
         MovieAPIUtil objMovieAPIUtil = new MovieAPIUtil();
 
         try {
-            lstMovieDto = objMovieAPIUtil.callDefaultMovieSearch();
+            lstMovieDto = objMovieAPIUtil.callMovieSearch("TOP");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -73,6 +73,8 @@ public class MainActivity extends AppCompatActivity
 
         int itemId = item.getItemId();
 
+        MovieAPIUtil objMovieAPIUtil = new MovieAPIUtil();
+
         switch (itemId) {
             /*
              * When you click the reset menu item, we want to start all over
@@ -81,10 +83,36 @@ public class MainActivity extends AppCompatActivity
              * ways. (in our humble opinion)
              */
             case R.id.action_refresh:
-                // COMPLETED (14) Pass in this as the ListItemClickListener to the MovieAdapter constructor
+
+                try {
+                    lstMovieDto = objMovieAPIUtil.callMovieSearch("TOP");              
+                }     catch (Exception e){
+                    e.printStackTrace();
+                }
                 mAdapter = new MovieAdapter(NUM_LIST_ITEMS, this, lstMovieDto);
                 mMovie.setAdapter(mAdapter);
                 return true;
+
+
+            case R.id.action_popular:
+                try {
+                    lstMovieDto = objMovieAPIUtil.callMovieSearch("POPULAR");
+                }     catch (Exception e){
+                    e.printStackTrace();
+                }
+                mAdapter = new MovieAdapter(NUM_LIST_ITEMS, this, lstMovieDto);
+                mMovie.setAdapter(mAdapter);
+                return true;
+
+
+            case R.id.action_topRated:
+                try {
+                    lstMovieDto = objMovieAPIUtil.callMovieSearch("TOP");
+                }     catch (Exception e){
+                    e.printStackTrace();
+                }
+
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -135,9 +163,14 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        public List<MovieDto> callDefaultMovieSearch() throws Exception {
+        public List<MovieDto> callMovieSearch( String flag) throws Exception {
 
-            String urlParam = "=popularity.desc&include_adult=false&include_video=false&page=1";
+            String urlParam = "";
+            if(flag == "TOP"){
+                urlParam = MovieAppConstant.getApiRootUriTop();
+            }else if( flag == "POPULAR"){
+                urlParam = MovieAppConstant.getApiRootUriPopular();
+            }
 
             new RestAPITask(strJson).execute(urlParam);
 
@@ -145,9 +178,10 @@ public class MainActivity extends AppCompatActivity
             return JsonUtils.parseApiResponseJson(strJson);
         }
 
+
         private BufferedReader externalAPICall(String urlParam) throws Exception {
 
-            URL url = new URL(MovieAppConstant.getApiRootUri() + urlParam);
+            URL url = new URL( urlParam);
 
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setDoOutput(true);
@@ -169,6 +203,7 @@ public class MainActivity extends AppCompatActivity
             protected String doInBackground(String... urls) {
                 try {
                     strJson = externalAPICall(urls[0]).readLine().toString();
+                    json =  strJson;
                     return strJson;
                 } catch (Exception e) {
                     e.printStackTrace();

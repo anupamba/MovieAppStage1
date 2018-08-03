@@ -80,7 +80,7 @@ public class DetailActivity extends AppCompatActivity {
         release_date_tv.setText(null != objMovieDto.getRelease_date()  ? objMovieDto.getRelease_date() : "Not Available");
 
         TextView geners_tv = findViewById(R.id.genre_ids_tv);
-        geners_tv.setText(null != objMovieDto.getGenre_ids()  ? objMovieDto.getGenre_ids().toString() : "Not Available");
+        //geners_tv.setText(null != objMovieDto.getGenre_ids()  ? objMovieDto.getGenre_ids().toString() : "Not Available");
 
     }
 
